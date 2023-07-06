@@ -1,0 +1,357 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  box-sizing: border-box; }
+
+.container {
+  height: 100vh; }
+
+.mr-right-huge {
+  margin-right: 15rem; }
+
+.mr-right-medium {
+  margin-right: 8rem; }
+
+.mr-right-small {
+  margin-right: 2rem; }
+
+.icon-general,
+.icon-sidebar {
+  height: 2.6rem;
+  width: 2.6rem; }
+
+.icon-sidebar {
+  color: #464646; }
+
+.header {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 8rem 1fr; }
+  .header-icon {
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .header-icon .siderbar-icon {
+      height: 2.5rem;
+      width: 2.5rem; }
+  .header__info {
+    margin-left: 10rem;
+    margin-right: 3rem;
+    display: flex;
+    align-items: center; }
+    .header__info-left {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      margin-right: auto; }
+      .header__info-left-text {
+        font-family: serif;
+        margin-right: auto;
+        color: #1e1c2e;
+        font-size: 3rem; }
+    .header__info-search {
+      display: flex;
+      align-items: center;
+      flex: 0 0 40%; }
+      .header__info-search .search-icon {
+        height: 1.6rem;
+        width: 1.6rem; }
+      .header__info-search input {
+        background-color: #fefeff;
+        width: 100%;
+        border: none;
+        padding: 1rem 4rem;
+        border-radius: 10rem;
+        transition: all 0.2s;
+        margin-left: -3rem; }
+        .header__info-search input:focus {
+          outline: none;
+          width: 38rem;
+          background-color: #fefeff; }
+    .header__info-profile-info {
+      display: flex;
+      align-items: center; }
+      .header__info-profile-info .ver-line {
+        border: 1px solid black;
+        height: 3rem; }
+      .header__info-profile-info .notification-icon-setting {
+        position: relative; }
+      .header__info-profile-info .dot-notification {
+        height: 0.6rem;
+        width: 0.6rem;
+        position: absolute;
+        top: 0.2rem;
+        right: 2.6rem;
+        border-radius: 50%;
+        background-color: red; }
+      .header__info-profile-info .profile-img-name {
+        display: flex;
+        align-items: center; }
+        .header__info-profile-info .profile-img-name img {
+          height: 4rem;
+          width: 4rem;
+          border-radius: 50%; }
+        .header__info-profile-info .profile-img-name .profile-name {
+          font-size: 1.8rem;
+          color: #464646; }
+
+.siderbar {
+  background-color: #f3f7fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0; }
+  .siderbar__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none; }
+    .siderbar__list-item {
+      margin-bottom: 3rem;
+      line-height: 0; }
+    .siderbar__list .siderbar__list-item:first-child {
+      padding: 1rem;
+      border-radius: 50%;
+      background-color: #1e1c2e; }
+      .siderbar__list .siderbar__list-item:first-child .icon-sidebar {
+        color: #f3f7fc; }
+    .siderbar__list .siderbar__list-item:hover {
+      padding: 1rem;
+      border-radius: 50%;
+      background-color: #1e1c2e; }
+      .siderbar__list .siderbar__list-item:hover .icon-sidebar {
+        color: #f3f7fc; }
+
+.projects {
+  background-color: #fefeff;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+  padding: 4rem 6rem; }
+  .projects__project-heading {
+    font-family: serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem; }
+    .projects__project-heading .heading-text,
+    .projects__project-heading .date-text {
+      font-size: 2.6rem;
+      color: #464646; }
+  .projects__info {
+    display: flex;
+    align-items: start;
+    margin-bottom: 4rem; }
+    .projects__info-progress-section {
+      display: flex;
+      align-items: end;
+      margin-right: auto; }
+      .projects__info-progress-section-item h2 {
+        font-size: 2.2rem;
+        line-height: 1;
+        color: #1e1c2e; }
+      .projects__info-progress-section-item h4 {
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: #464646; }
+      .projects__info-progress-section .circle {
+        height: 0.8rem;
+        width: 0.8rem;
+        line-height: 0;
+        border: 1px solid #464646;
+        border-radius: 50%;
+        background-color: #f3f7fc;
+        margin: 0 2.4rem 0.7rem 2.4rem; }
+  .projects__cards-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem; }
+    .projects__cards-section-card {
+      height: 26rem;
+      border-radius: 2rem;
+      padding: 2rem;
+      background-color: #fefeff;
+      box-shadow: 0 0.2rem 7rem rgba(0, 0, 0, 0.1); }
+      .projects__cards-section-card-date-section-card {
+        display: flex;
+        align-items: center; }
+        .projects__cards-section-card-date-section-card h4 {
+          font-size: 1.3rem;
+          color: #686868;
+          margin-right: auto; }
+        .projects__cards-section-card-date-section-card .card-icon {
+          color: black; }
+      .projects__cards-section-card-heading {
+        margin: 2rem 0;
+        text-align: center;
+        color: #686868; }
+        .projects__cards-section-card-heading h3 {
+          font-size: 1.6rem;
+          color: #464646; }
+        .projects__cards-section-card-heading h4 {
+          font-size: 1.3rem;
+          line-height: 0.8;
+          font-weight: 500; }
+      .projects__cards-section-card-progress {
+        margin-bottom: 1.8rem; }
+        .projects__cards-section-card-progress h3 {
+          color: #464646;
+          font-size: 1.3rem; }
+        .projects__cards-section-card-progress .per-preogress {
+          text-align: right;
+          margin-top: 0.6rem; }
+        .projects__cards-section-card-progress .progress-section {
+          background-color: rgba(192, 192, 192, 0.427);
+          width: 100%;
+          border-radius: 15px; }
+        .projects__cards-section-card-progress .skill {
+          background-color: #2ac9ff;
+          padding: 1.2%;
+          border-radius: 15px; }
+        .projects__cards-section-card-progress .web {
+          width: 90%; }
+        .projects__cards-section-card-progress .mobile {
+          width: 30%; }
+        .projects__cards-section-card-progress .dashboard {
+          width: 50%; }
+        .projects__cards-section-card-progress .wireframing {
+          width: 20%; }
+      .projects__cards-section-card .divider {
+        margin: 1rem 0;
+        height: 0.06rem;
+        width: 114%;
+        margin-left: -2rem;
+        background-color: #686868; }
+      .projects__cards-section-card-bottom {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem; }
+        .projects__cards-section-card-bottom-left {
+          display: flex;
+          align-items: center;
+          line-height: 0;
+          margin-right: auto; }
+          .projects__cards-section-card-bottom-left-imgs {
+            margin-right: 1.2rem; }
+            .projects__cards-section-card-bottom-left-imgs img {
+              border: 1.6px solid #f3f7fc;
+              height: 2.6rem;
+              width: 2.6rem;
+              border-radius: 50%; }
+            .projects__cards-section-card-bottom-left-imgs img:nth-child(2) {
+              margin-left: -1rem; }
+          .projects__cards-section-card-bottom-left .add-icon {
+            height: 2rem;
+            width: 2rem;
+            background-color: #2ac9ff;
+            color: #f3f7fc;
+            border-radius: 50%; }
+        .projects__cards-section-card-bottom-right h3 {
+          background-color: #dbf7fc;
+          color: #2ac9ff;
+          padding: 0.4rem 1.8rem;
+          border-radius: 2.8rem; }
+        .projects__cards-section-card-bottom-right :hover {
+          cursor: pointer;
+          transform: scale(1.1); }
+      .projects__cards-section-card .hover-lines {
+        opacity: 0;
+        margin-top: 2rem; }
+        .projects__cards-section-card .hover-lines .hover-line-1 {
+          height: 0.4rem;
+          background-color: #2ac9ff; }
+        .projects__cards-section-card .hover-lines .hover-line-2 {
+          margin-top: 0.6rem;
+          height: 0.4rem;
+          width: 80%;
+          margin-left: 10%;
+          background-color: #2ac9ff; }
+      .projects__cards-section-card:hover {
+        cursor: pointer;
+        transform: scale(1.02); }
+        .projects__cards-section-card:hover .hover-lines {
+          transition: all 0.1s;
+          opacity: 1; }
+    .projects__cards-section-card:nth-child(2) {
+      background-color: #fee5ca; }
+      .projects__cards-section-card:nth-child(2) .skill,
+      .projects__cards-section-card:nth-child(2) .add-icon {
+        background-color: #fe733a; }
+      .projects__cards-section-card:nth-child(2) .divider {
+        background-color: #f3f7fc; }
+      .projects__cards-section-card:nth-child(2) .card-button {
+        background-color: #f3f7fc;
+        color: #fe733a; }
+      .projects__cards-section-card:nth-child(2):hover .hover-line-1,
+      .projects__cards-section-card:nth-child(2):hover .hover-line-2 {
+        background-color: #fe733a; }
+    .projects__cards-section-card:nth-child(3) {
+      background-color: #baf3d2; }
+      .projects__cards-section-card:nth-child(3) .skill,
+      .projects__cards-section-card:nth-child(3) .add-icon {
+        background-color: #02d153; }
+      .projects__cards-section-card:nth-child(3) .divider {
+        background-color: #f3f7fc; }
+      .projects__cards-section-card:nth-child(3) .card-button {
+        background-color: #f3f7fc;
+        color: #02d153; }
+      .projects__cards-section-card:nth-child(3):hover .hover-line-1,
+      .projects__cards-section-card:nth-child(3):hover .hover-line-2 {
+        background-color: #02d153; }
+    .projects__cards-section-card:nth-child(4) {
+      background-color: #fed3e3; }
+      .projects__cards-section-card:nth-child(4) .skill,
+      .projects__cards-section-card:nth-child(4) .add-icon {
+        background-color: #ff73ad; }
+      .projects__cards-section-card:nth-child(4) .divider {
+        background-color: #f3f7fc; }
+      .projects__cards-section-card:nth-child(4) .card-button {
+        background-color: #f3f7fc;
+        color: #ff73ad; }
+      .projects__cards-section-card:nth-child(4):hover .hover-line-1,
+      .projects__cards-section-card:nth-child(4):hover .hover-line-2 {
+        background-color: #ff73ad; }
+    .projects__cards-section-card:nth-child(5) {
+      background-color: #e9e7fd; }
+      .projects__cards-section-card:nth-child(5) .skill,
+      .projects__cards-section-card:nth-child(5) .add-icon {
+        background-color: #09006c; }
+      .projects__cards-section-card:nth-child(5) .divider {
+        background-color: #f3f7fc; }
+      .projects__cards-section-card:nth-child(5) .card-button {
+        background-color: #f3f7fc;
+        color: #09006c; }
+      .projects__cards-section-card:nth-child(5):hover .hover-line-1,
+      .projects__cards-section-card:nth-child(5):hover .hover-line-2 {
+        background-color: #09006c; }
+    .projects__cards-section-card:nth-child(6) {
+      background-color: #fff1d2; }
+      .projects__cards-section-card:nth-child(6) .skill,
+      .projects__cards-section-card:nth-child(6) .add-icon {
+        background-color: #ffae00; }
+      .projects__cards-section-card:nth-child(6) .divider {
+        background-color: #f3f7fc; }
+      .projects__cards-section-card:nth-child(6) .card-button {
+        background-color: #f3f7fc;
+        color: #ffae00; }
+      .projects__cards-section-card:nth-child(6):hover .hover-line-1,
+      .projects__cards-section-card:nth-child(6):hover .hover-line-2 {
+        background-color: #ffae00; }
+
+.clientmsg {
+  background-color: #f3f7fc; }
+
+.container {
+  display: grid;
+  grid-template-columns: 12rem 1.5fr 1fr;
+  grid-template-rows: 12rem 1fr;
+  background-color: #f3f7fc; }

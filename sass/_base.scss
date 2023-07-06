@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+}
+
+$bg-color: #f3f7fc;
+$bg-project-section: #fefeff;
+
+$main-color: #1e1c2e;
+$grey-dark: #464646;
+$mr-huge: 15rem;
+$mr-med: 8rem;
+$mr-sm: 2rem;
+
+$card-heading: #686868;
+$card-1: #2ac9ff;
+$card-2: #fee5ca;
+$card-2-sub: #fe733a;
+$card-3: #baf3d2;
+$card-3-sub: #02d153;
+$card-4: #fed3e3;
+$card-4-sub: #ff73ad;
+$card-5: #e9e7fd;
+$card-5-sub: #09006c;
+$card-6: #fff1d2;
+$card-6-sub: #ffae00;
+
+.mr-right-huge {
+  margin-right: $mr-huge;
+}
+
+.mr-right-medium {
+  margin-right: $mr-med;
+}
+
+.mr-right-small {
+  margin-right: $mr-sm;
+}
+
+.icon-general,
+.icon-sidebar {
+  height: 2.6rem;
+  width: 2.6rem;
+}
+
+.icon-sidebar {
+  color: $grey-dark;
+}

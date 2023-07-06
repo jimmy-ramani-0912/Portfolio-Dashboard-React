@@ -1,0 +1,469 @@
+.header {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+
+  &-icon {
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .siderbar-icon {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+
+  &__info {
+    margin-left: 10rem;
+    margin-right: 3rem;
+    display: flex;
+    align-items: center;
+
+    &-left {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+
+      &-text {
+        font-family: serif;
+        margin-right: auto;
+        color: $main-color;
+        font-size: 3rem;
+      }
+    }
+
+    &-search {
+      display: flex;
+      align-items: center;
+      flex: 0 0 40%;
+
+      .search-icon {
+        height: 1.6rem;
+        width: 1.6rem;
+      }
+
+      & input {
+        background-color: $bg-project-section;
+        width: 100%;
+        border: none;
+        padding: 1rem 4rem;
+        border-radius: 10rem;
+        transition: all 0.2s;
+        margin-left: -3rem;
+
+        &:focus {
+          outline: none;
+          width: 38rem;
+          background-color: $bg-project-section;
+        }
+      }
+    }
+
+    &-profile-info {
+      display: flex;
+      align-items: center;
+
+      .ver-line {
+        border: 1px solid black;
+        height: 3rem;
+      }
+
+      .notification-icon-setting {
+        position: relative;
+      }
+
+      .dot-notification {
+        height: 0.6rem;
+        width: 0.6rem;
+        position: absolute;
+        top: 0.2rem;
+        right: 2.6rem;
+        border-radius: 50%;
+        background-color: red;
+      }
+
+      .profile-img-name {
+        display: flex;
+        align-items: center;
+
+        & img {
+          height: 4rem;
+          width: 4rem;
+          border-radius: 50%;
+        }
+
+        .profile-name {
+          font-size: 1.8rem;
+          color: $grey-dark;
+        }
+      }
+    }
+  }
+}
+
+.siderbar {
+  background-color: $bg-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+
+    &-item {
+      margin-bottom: 3rem;
+      line-height: 0;
+    }
+
+    .siderbar__list-item:first-child {
+      padding: 1rem;
+      border-radius: 50%;
+      background-color: $main-color;
+
+      .icon-sidebar {
+        color: $bg-color;
+      }
+    }
+
+    .siderbar__list-item:hover {
+      padding: 1rem;
+      border-radius: 50%;
+      background-color: $main-color;
+
+      .icon-sidebar {
+        color: $bg-color;
+      }
+    }
+  }
+}
+
+.projects {
+  background-color: $bg-project-section;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+  padding: 4rem 6rem;
+
+  &__project-heading {
+    font-family: serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+
+    .heading-text,
+    .date-text {
+      font-size: 2.6rem;
+      color: $grey-dark;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: start;
+    margin-bottom: 4rem;
+
+    &-progress-section {
+      display: flex;
+      align-items: end;
+      margin-right: auto;
+
+      &-item {
+        h2 {
+          font-size: 2.2rem;
+          line-height: 1;
+          color: $main-color;
+        }
+
+        h4 {
+          font-size: 1.6rem;
+          font-weight: 300;
+          color: $grey-dark;
+        }
+      }
+
+      .circle {
+        height: 0.8rem;
+        width: 0.8rem;
+        line-height: 0;
+        border: 1px solid $grey-dark;
+        border-radius: 50%;
+        background-color: $bg-color;
+        margin: 0 2.4rem 0.7rem 2.4rem;
+      }
+    }
+  }
+
+  &__cards-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+    &-card {
+      height: 26rem;
+      border-radius: 2rem;
+      padding: 2rem;
+      background-color: $bg-project-section;
+      box-shadow: 0 0.2rem 7rem rgba(0, 0, 0, 0.1);
+
+      &-date-section-card {
+        display: flex;
+        align-items: center;
+
+        h4 {
+          font-size: 1.3rem;
+          color: $card-heading;
+          margin-right: auto;
+        }
+        .card-icon {
+          color: black;
+        }
+      }
+
+      &-heading {
+        margin: 2rem 0;
+        text-align: center;
+        color: $card-heading;
+
+        h3 {
+          font-size: 1.6rem;
+          color: $grey-dark;
+        }
+        h4 {
+          font-size: 1.3rem;
+          line-height: 0.8;
+          font-weight: 500;
+        }
+      }
+
+      &-progress {
+        margin-bottom: 1.8rem;
+        h3 {
+          color: $grey-dark;
+          font-size: 1.3rem;
+        }
+
+        .per-preogress {
+          text-align: right;
+          margin-top: 0.6rem;
+        }
+
+        .progress-section {
+          background-color: rgba(192, 192, 192, 0.427);
+          width: 100%;
+          border-radius: 15px;
+        }
+
+        .skill {
+          background-color: $card-1;
+          padding: 1.2%;
+          border-radius: 15px;
+        }
+
+        .web {
+          width: 90%;
+        }
+
+        .mobile {
+          width: 30%;
+        }
+
+        .dashboard {
+          width: 50%;
+        }
+
+        .wireframing {
+          width: 20%;
+        }
+      }
+
+      .divider {
+        margin: 1rem 0;
+        height: 0.06rem;
+        width: 114%;
+        margin-left: -2rem;
+        background-color: $card-heading;
+      }
+
+      &-bottom {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        &-left {
+          display: flex;
+          align-items: center;
+          line-height: 0;
+          margin-right: auto;
+          &-imgs {
+            margin-right: 1.2rem;
+            img {
+              border: 1.6px solid $bg-color;
+              height: 2.6rem;
+              width: 2.6rem;
+              border-radius: 50%;
+            }
+            img:nth-child(2) {
+              margin-left: -1rem;
+            }
+          }
+          .add-icon {
+            height: 2rem;
+            width: 2rem;
+            background-color: $card-1;
+            color: $bg-color;
+            border-radius: 50%;
+          }
+        }
+
+        &-right {
+          h3 {
+            background-color: #dbf7fc;
+            color: $card-1;
+            padding: 0.4rem 1.8rem;
+            border-radius: 2.8rem;
+          }
+          :hover {
+            cursor: pointer;
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .hover-lines {
+        opacity: 0;
+        margin-top: 2rem;
+        .hover-line-1 {
+          height: 0.4rem;
+          background-color: $card-1;
+        }
+
+        .hover-line-2 {
+          margin-top: 0.6rem;
+          height: 0.4rem;
+          width: 80%;
+          margin-left: 10%;
+          background-color: $card-1;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+        .hover-lines {
+          transition: all 0.1s;
+          opacity: 1;
+        }
+      }
+    }
+
+    &-card:nth-child(2) {
+      background-color: $card-2;
+      .skill,
+      .add-icon {
+        background-color: $card-2-sub;
+      }
+      .divider {
+        background-color: $bg-color;
+      }
+      .card-button {
+        background-color: $bg-color;
+        color: $card-2-sub;
+      }
+      &:hover {
+        .hover-line-1,
+        .hover-line-2 {
+          background-color: $card-2-sub;
+        }
+      }
+    }
+    &-card:nth-child(3) {
+      background-color: $card-3;
+      .skill,
+      .add-icon {
+        background-color: $card-3-sub;
+      }
+      .divider {
+        background-color: $bg-color;
+      }
+      .card-button {
+        background-color: $bg-color;
+        color: $card-3-sub;
+      }
+      &:hover {
+        .hover-line-1,
+        .hover-line-2 {
+          background-color: $card-3-sub;
+        }
+      }
+    }
+    &-card:nth-child(4) {
+      background-color: $card-4;
+      .skill,
+      .add-icon {
+        background-color: $card-4-sub;
+      }
+      .divider {
+        background-color: $bg-color;
+      }
+      .card-button {
+        background-color: $bg-color;
+        color: $card-4-sub;
+      }
+      &:hover {
+        .hover-line-1,
+        .hover-line-2 {
+          background-color: $card-4-sub;
+        }
+      }
+    }
+    &-card:nth-child(5) {
+      background-color: $card-5;
+      .skill,
+      .add-icon {
+        background-color: $card-5-sub;
+      }
+      .divider {
+        background-color: $bg-color;
+      }
+      .card-button {
+        background-color: $bg-color;
+        color: $card-5-sub;
+      }
+      &:hover {
+        .hover-line-1,
+        .hover-line-2 {
+          background-color: $card-5-sub;
+        }
+      }
+    }
+    &-card:nth-child(6) {
+      background-color: $card-6;
+      .skill,
+      .add-icon {
+        background-color: $card-6-sub;
+      }
+      .divider {
+        background-color: $bg-color;
+      }
+      .card-button {
+        background-color: $bg-color;
+        color: $card-6-sub;
+      }
+      &:hover {
+        .hover-line-1,
+        .hover-line-2 {
+          background-color: $card-6-sub;
+        }
+      }
+    }
+  }
+}
+
+.clientmsg {
+  background-color: $bg-color;
+}
