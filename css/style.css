@@ -12,9 +12,6 @@ body {
   line-height: 1.7;
   box-sizing: border-box; }
 
-.container {
-  height: 100vh; }
-
 .mr-right-huge {
   margin-right: 15rem; }
 
@@ -29,15 +26,18 @@ body {
   height: 2.6rem;
   width: 2.6rem; }
 
+.icon-clientmsg {
+  height: 1.8rem;
+  width: 1.8rem; }
+
 .icon-sidebar {
   color: #464646; }
 
 .header {
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: 8rem 1fr; }
+  grid-template-columns: 11rem 1fr; }
   .header-icon {
-    width: 12rem;
     display: flex;
     justify-content: center;
     align-items: center; }
@@ -45,7 +45,7 @@ body {
       height: 2.5rem;
       width: 2.5rem; }
   .header__info {
-    margin-left: 10rem;
+    margin-left: 6rem;
     margin-right: 3rem;
     display: flex;
     align-items: center; }
@@ -62,21 +62,23 @@ body {
     .header__info-search {
       display: flex;
       align-items: center;
-      flex: 0 0 40%; }
+      flex: 0 0 55%; }
       .header__info-search .search-icon {
         height: 1.6rem;
         width: 1.6rem; }
       .header__info-search input {
+        box-shadow: 0 2rem 10rem rgba(0, 0, 0, 0.1);
         background-color: #fefeff;
-        width: 100%;
+        width: 90%;
         border: none;
         padding: 1rem 4rem;
         border-radius: 10rem;
         transition: all 0.2s;
         margin-left: -3rem; }
         .header__info-search input:focus {
+          height: 4.5rem;
+          width: 100%;
           outline: none;
-          width: 38rem;
           background-color: #fefeff; }
     .header__info-profile-info {
       display: flex;
@@ -106,7 +108,6 @@ body {
           color: #464646; }
 
 .siderbar {
-  background-color: #f3f7fc;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,13 +137,15 @@ body {
   background-color: #fefeff;
   border-top-left-radius: 5rem;
   border-top-right-radius: 5rem;
-  padding: 4rem 6rem; }
+  padding: 4rem 6rem 0 4rem; }
   .projects__project-heading {
     font-family: serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 4rem; }
+    margin-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem; }
     .projects__project-heading .heading-text,
     .projects__project-heading .date-text {
       font-size: 2.6rem;
@@ -150,7 +153,9 @@ body {
   .projects__info {
     display: flex;
     align-items: start;
-    margin-bottom: 4rem; }
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem; }
     .projects__info-progress-section {
       display: flex;
       align-items: end;
@@ -172,15 +177,18 @@ body {
         background-color: #f3f7fc;
         margin: 0 2.4rem 0.7rem 2.4rem; }
   .projects__cards-section {
+    height: 54vh;
+    overflow: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 8rem; }
+    gap: 6rem;
+    padding: 2rem; }
     .projects__cards-section-card {
-      height: 26rem;
+      height: 28rem;
       border-radius: 2rem;
       padding: 2rem;
       background-color: #fefeff;
-      box-shadow: 0 0.2rem 7rem rgba(0, 0, 0, 0.1); }
+      box-shadow: 0 0.2rem 2.8rem rgba(0, 0, 0, 0.1); }
       .projects__cards-section-card-date-section-card {
         display: flex;
         align-items: center; }
@@ -191,7 +199,7 @@ body {
         .projects__cards-section-card-date-section-card .card-icon {
           color: black; }
       .projects__cards-section-card-heading {
-        margin: 2rem 0;
+        margin: 3rem 0;
         text-align: center;
         color: #686868; }
         .projects__cards-section-card-heading h3 {
@@ -346,12 +354,70 @@ body {
       .projects__cards-section-card:nth-child(6):hover .hover-line-1,
       .projects__cards-section-card:nth-child(6):hover .hover-line-2 {
         background-color: #ffae00; }
+  .projects__cards-section::-webkit-scrollbar {
+    display: none; }
 
-.clientmsg {
-  background-color: #f3f7fc; }
+.clientmsg__heading {
+  padding: 4rem 6rem 2rem 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .clientmsg__heading .heading-text {
+    font-size: 2.6rem;
+    color: #464646; }
+
+.clientmsg .divider-clientmsg {
+  height: 0.6px;
+  background-color: #9a9b9a;
+  margin: 1rem 0; }
+
+.clientmsg__cards {
+  height: 68vh;
+  overflow: auto; }
+  .clientmsg__cards-item {
+    width: 82%;
+    padding: 0.8rem 1.2rem;
+    margin: 0 5rem;
+    display: flex;
+    align-items: center; }
+    .clientmsg__cards-item img {
+      height: 5.8rem;
+      width: 5.8rem;
+      border-radius: 50%; }
+    .clientmsg__cards-item-text {
+      margin-left: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      font-family: serif; }
+      .clientmsg__cards-item-text-heading-client {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .clientmsg__cards-item-text-heading-client h3 {
+          font-size: 1.8rem;
+          color: #464646; }
+      .clientmsg__cards-item-text-desc {
+        line-height: 1.4;
+        font-size: 1.6rem;
+        color: #686868; }
+      .clientmsg__cards-item-text-date {
+        line-height: 1;
+        font-size: 1.6rem;
+        color: #9a9b9a;
+        font-weight: 600;
+        text-align: end; }
+  .clientmsg__cards-item:hover {
+    width: 90%;
+    border-radius: 1.4rem;
+    background-color: #fefeff; }
+    .clientmsg__cards-item:hover .clientmsg__cards-item-text {
+      padding: 1rem 2.4rem 1rem 0; }
+
+.clientmsg__cards::-webkit-scrollbar {
+  display: none; }
 
 .container {
   display: grid;
-  grid-template-columns: 12rem 1.5fr 1fr;
-  grid-template-rows: 12rem 1fr;
+  grid-template-columns: 11rem 1.5fr 1fr;
+  grid-template-rows: 11rem 1fr;
   background-color: #f3f7fc; }

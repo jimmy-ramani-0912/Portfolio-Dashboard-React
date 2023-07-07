@@ -1,10 +1,9 @@
 .header {
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: 8rem 1fr;
+  grid-template-columns: 11rem 1fr;
 
   &-icon {
-    width: 12rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +15,7 @@
   }
 
   &__info {
-    margin-left: 10rem;
+    margin-left: 6rem;
     margin-right: 3rem;
     display: flex;
     align-items: center;
@@ -38,25 +37,25 @@
     &-search {
       display: flex;
       align-items: center;
-      flex: 0 0 40%;
-
+      flex: 0 0 55%;
       .search-icon {
         height: 1.6rem;
         width: 1.6rem;
       }
 
       & input {
+        box-shadow: 0 2rem 10rem rgba(0, 0, 0, 0.1);
         background-color: $bg-project-section;
-        width: 100%;
+        width: 90%;
         border: none;
         padding: 1rem 4rem;
         border-radius: 10rem;
         transition: all 0.2s;
         margin-left: -3rem;
-
         &:focus {
+          height: 4.5rem;
+          width: 100%;
           outline: none;
-          width: 38rem;
           background-color: $bg-project-section;
         }
       }
@@ -105,7 +104,6 @@
 }
 
 .siderbar {
-  background-color: $bg-color;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,7 +146,7 @@
   background-color: $bg-project-section;
   border-top-left-radius: 5rem;
   border-top-right-radius: 5rem;
-  padding: 4rem 6rem;
+  padding: 4rem 6rem 0 4rem;
 
   &__project-heading {
     font-family: serif;
@@ -156,6 +154,8 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
     .heading-text,
     .date-text {
@@ -167,7 +167,9 @@
   &__info {
     display: flex;
     align-items: start;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
     &-progress-section {
       display: flex;
@@ -201,15 +203,19 @@
   }
 
   &__cards-section {
+    height: 54vh;
+    overflow: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 8rem;
+    gap: 6rem;
+    padding: 2rem;
+
     &-card {
-      height: 26rem;
+      height: 28rem;
       border-radius: 2rem;
       padding: 2rem;
       background-color: $bg-project-section;
-      box-shadow: 0 0.2rem 7rem rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0.2rem 2.8rem rgba(0, 0, 0, 0.1);
 
       &-date-section-card {
         display: flex;
@@ -226,7 +232,7 @@
       }
 
       &-heading {
-        margin: 2rem 0;
+        margin: 3rem 0;
         text-align: center;
         color: $card-heading;
 
@@ -462,8 +468,87 @@
       }
     }
   }
+
+  &__cards-section::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .clientmsg {
-  background-color: $bg-color;
+  &__heading {
+    padding: 4rem 6rem 2rem 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .heading-text {
+      font-size: 2.6rem;
+      color: $grey-dark;
+    }
+  }
+
+  .divider-clientmsg {
+    height: 0.6px;
+    background-color: $grey-light;
+    margin: 1rem 0;
+  }
+
+  &__cards {
+    height: 68vh;
+    overflow: auto;
+    &-item {
+      width: 82%;
+      padding: 0.8rem 1.2rem;
+      margin: 0 5rem;
+      display: flex;
+      align-items: center;
+      img {
+        height: 5.8rem;
+        width: 5.8rem;
+        border-radius: 50%;
+      }
+      &-text {
+        margin-left: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        font-family: serif;
+
+        &-heading-client {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h3 {
+            font-size: 1.8rem;
+            color: $grey-dark;
+          }
+        }
+
+        &-desc {
+          line-height: 1.4;
+          font-size: 1.6rem;
+          color: $card-heading;
+        }
+
+        &-date {
+          line-height: 1;
+          font-size: 1.6rem;
+          color: $grey-light;
+          font-weight: 600;
+          text-align: end;
+        }
+      }
+    }
+
+    &-item:hover {
+      width: 90%;
+      border-radius: 1.4rem;
+      background-color: $bg-project-section;
+      .clientmsg__cards-item-text {
+        padding: 1rem 2.4rem 1rem 0;
+      }
+    }
+  }
+
+  &__cards::-webkit-scrollbar {
+    display: none;
+  }
 }

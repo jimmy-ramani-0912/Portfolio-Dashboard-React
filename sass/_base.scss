@@ -14,16 +14,13 @@ body {
   line-height: 1.7;
   box-sizing: border-box;
 }
-
-.container {
-  height: 100vh;
-}
-
 $bg-color: #f3f7fc;
 $bg-project-section: #fefeff;
 
 $main-color: #1e1c2e;
 $grey-dark: #464646;
+$grey-light: #9a9b9a;
+
 $mr-huge: 15rem;
 $mr-med: 8rem;
 $mr-sm: 2rem;
@@ -57,6 +54,11 @@ $card-6-sub: #ffae00;
 .icon-sidebar {
   height: 2.6rem;
   width: 2.6rem;
+}
+
+.icon-clientmsg {
+  height: 1.8rem;
+  width: 1.8rem;
 }
 
 .icon-sidebar {
