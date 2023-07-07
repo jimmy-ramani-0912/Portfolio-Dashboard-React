@@ -6,6 +6,14 @@
 html {
   font-size: 62.5%; }
 
+@media screen and (max-width: 1163px) {
+  html {
+    font-size: 57%; } }
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 54%; } }
+
 body {
   font-family: sans-serif;
   font-weight: 400;
@@ -33,10 +41,18 @@ body {
 .icon-sidebar {
   color: #464646; }
 
+.icon-general:hover,
+.icon-sidebar:hover,
+.icon-clientmsg:hover {
+  transform: scale(1.07); }
+
 .header {
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: 11rem 1fr; }
+  @media screen and (max-width: 1163px) and (min-width: 800px) {
+    .header {
+      grid-template-columns: 8rem 1fr; } }
   .header-icon {
     display: flex;
     justify-content: center;
@@ -59,6 +75,15 @@ body {
         margin-right: auto;
         color: #1e1c2e;
         font-size: 3rem; }
+    @media screen and (max-width: 600px) {
+      .header__info {
+        align-items: start;
+        margin-top: 2.2rem; }
+        .header__info-left {
+          flex-direction: column;
+          align-items: start; }
+        .header__info-search {
+          margin-left: 1rem; } }
     .header__info-search {
       display: flex;
       align-items: center;
@@ -106,12 +131,17 @@ body {
         .header__info-profile-info .profile-img-name .profile-name {
           font-size: 1.8rem;
           color: #464646; }
+  @media screen and (max-width: 700px) {
+    .header {
+      grid-template-columns: 1fr; }
+      .header-icon {
+        display: none; } }
 
 .siderbar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem 0; }
+  justify-content: center; }
   .siderbar__list {
     display: flex;
     align-items: center;
@@ -132,11 +162,17 @@ body {
       background-color: #1e1c2e; }
       .siderbar__list .siderbar__list-item:hover .icon-sidebar {
         color: #f3f7fc; }
+  @media screen and (max-width: 700px) {
+    .siderbar {
+      grid-column: 1/-1; }
+      .siderbar__list {
+        width: 80%;
+        flex-direction: row;
+        justify-content: space-around; } }
 
 .projects {
   background-color: #fefeff;
-  border-top-left-radius: 5rem;
-  border-top-right-radius: 5rem;
+  border-radius: 5rem;
   padding: 4rem 6rem 0 4rem; }
   .projects__project-heading {
     font-family: serif;
@@ -156,6 +192,9 @@ body {
     margin-bottom: 2rem;
     padding-left: 2rem;
     padding-right: 2rem; }
+    @media screen and (max-width: 1350px) {
+      .projects__info {
+        flex-direction: column-reverse; } }
     .projects__info-progress-section {
       display: flex;
       align-items: end;
@@ -168,6 +207,22 @@ body {
         font-size: 1.6rem;
         font-weight: 300;
         color: #464646; }
+      @media screen and (max-width: 1051px) {
+        .projects__info-progress-section-item {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          margin: 0 auto; }
+          .projects__info-progress-section-item h2 {
+            margin-right: 1rem; } }
+      @media screen and (max-width: 1051px) {
+        .projects__info-progress-section-item:hover {
+          background-color: #1e1c2e;
+          padding: 1.4rem 1.2rem;
+          border-radius: 0.6rem; }
+          .projects__info-progress-section-item:hover h2,
+          .projects__info-progress-section-item:hover h4 {
+            color: #f3f7fc; } }
       .projects__info-progress-section .circle {
         height: 0.8rem;
         width: 0.8rem;
@@ -176,19 +231,52 @@ body {
         border-radius: 50%;
         background-color: #f3f7fc;
         margin: 0 2.4rem 0.7rem 2.4rem; }
+      @media screen and (min-width: 800px) and (max-width: 1051px) {
+        .projects__info-progress-section {
+          width: 100%;
+          display: grid;
+          gap: 2rem;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr; }
+          .projects__info-progress-section .circle {
+            display: none; } }
+      @media screen and (max-width: 764px) {
+        .projects__info-progress-section {
+          width: 100%;
+          display: grid;
+          gap: 2rem;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr; }
+          .projects__info-progress-section .circle {
+            display: none; } }
+    @media screen and (max-width: 1350px) {
+      .projects__info-icons-section {
+        width: 100%;
+        text-align: end;
+        margin-bottom: 1rem; } }
   .projects__cards-section {
-    height: 54vh;
+    height: 58vh;
     overflow: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 6rem;
-    padding: 2rem; }
+    padding-top: 2.4rem;
+    padding-bottom: 8rem; }
+    @media screen and (max-width: 1200px) and (min-width: 800px) {
+      .projects__cards-section {
+        gap: 3.5rem; } }
+    @media screen and (max-width: 800px) {
+      .projects__cards-section {
+        height: 80vh; } }
     .projects__cards-section-card {
       height: 28rem;
       border-radius: 2rem;
       padding: 2rem;
       background-color: #fefeff;
       box-shadow: 0 0.2rem 2.8rem rgba(0, 0, 0, 0.1); }
+      @media screen and (max-width: 1200px) and (min-width: 900px) {
+        .projects__cards-section-card {
+          height: 30rem; } }
       .projects__cards-section-card-date-section-card {
         display: flex;
         align-items: center; }
@@ -239,6 +327,9 @@ body {
         width: 114%;
         margin-left: -2rem;
         background-color: #686868; }
+        @media screen and (max-width: 1200px) and (min-width: 800px) {
+          .projects__cards-section-card .divider {
+            width: 120%; } }
       .projects__cards-section-card-bottom {
         display: flex;
         align-items: center;
@@ -271,6 +362,13 @@ body {
         .projects__cards-section-card-bottom-right :hover {
           cursor: pointer;
           transform: scale(1.1); }
+        @media screen and (max-width: 1200px) and (min-width: 800px) {
+          .projects__cards-section-card-bottom {
+            flex-direction: column-reverse;
+            align-items: start;
+            margin-top: 0; }
+            .projects__cards-section-card-bottom-left {
+              margin-top: 1rem; } }
       .projects__cards-section-card .hover-lines {
         opacity: 0;
         margin-top: 2rem; }
@@ -289,6 +387,24 @@ body {
         .projects__cards-section-card:hover .hover-lines {
           transition: all 0.1s;
           opacity: 1; }
+      @media screen and (max-width: 900px) and (min-width: 800px) {
+        .projects__cards-section-card-heading {
+          margin: 1.6rem 0; }
+        .projects__cards-section-card .divider {
+          margin-top: 0.2rem; } }
+    @media screen and (max-width: 550px) {
+      .projects__cards-section {
+        grid-template-columns: 1fr; }
+        .projects__cards-section-card {
+          height: 100%;
+          width: 80%;
+          margin: 0 auto; }
+          .projects__cards-section-card .divider {
+            width: 112%; }
+          .projects__cards-section-card-heading h3 {
+            font-size: 1.8rem; }
+          .projects__cards-section-card-heading h4 {
+            font-size: 1.6rem; } }
     .projects__cards-section-card:nth-child(2) {
       background-color: #fee5ca; }
       .projects__cards-section-card:nth-child(2) .skill,
@@ -356,6 +472,24 @@ body {
         background-color: #ffae00; }
   .projects__cards-section::-webkit-scrollbar {
     display: none; }
+  @media screen and (max-width: 700px) {
+    .projects {
+      grid-column: 1/-1; } }
+  @media screen and (max-width: 1051px) and (min-width: 800px) {
+    .projects {
+      padding: 2rem 4rem 0 4rem; }
+      .projects__project-heading {
+        margin-bottom: 1rem; } }
+  @media screen and (max-width: 950px) {
+    .projects .heading-text,
+    .projects .date-text {
+      font-size: 2rem; } }
+  @media screen and (max-width: 800px) {
+    .projects {
+      grid-column: 2/-1; } }
+  @media screen and (max-width: 700px) {
+    .projects {
+      grid-column: 1/-1; } }
 
 .clientmsg__heading {
   padding: 4rem 6rem 2rem 6rem;
@@ -365,6 +499,18 @@ body {
   .clientmsg__heading .heading-text {
     font-size: 2.6rem;
     color: #464646; }
+  @media screen and (max-width: 1350px) and (min-width: 800px) {
+    .clientmsg__heading {
+      padding: 4rem 4rem 2rem 6rem; } }
+  @media screen and (max-width: 1051px) {
+    .clientmsg__heading {
+      padding-top: 2rem; } }
+  @media screen and (max-width: 950px) {
+    .clientmsg__heading {
+      padding: 2rem 4rem 2rem 4rem; } }
+  @media screen and (max-width: 800px) {
+    .clientmsg__heading {
+      padding: 4rem 4rem 2rem 4rem; } }
 
 .clientmsg .divider-clientmsg {
   height: 0.6px;
@@ -377,7 +523,7 @@ body {
   .clientmsg__cards-item {
     width: 82%;
     padding: 0.8rem 1.2rem;
-    margin: 0 5rem;
+    margin: 0 2rem;
     display: flex;
     align-items: center; }
     .clientmsg__cards-item img {
@@ -385,6 +531,7 @@ body {
       width: 5.8rem;
       border-radius: 50%; }
     .clientmsg__cards-item-text {
+      width: 100%;
       margin-left: 1.2rem;
       display: flex;
       flex-direction: column;
@@ -405,10 +552,17 @@ body {
         font-size: 1.6rem;
         color: #9a9b9a;
         font-weight: 600;
-        text-align: end; }
+        text-align: end;
+        padding: 0.8rem 0; }
+  .clientmsg__cards-item:last-child {
+    margin-bottom: 3.4rem; }
+  @media screen and (max-width: 950px) {
+    .clientmsg__cards-item {
+      margin: 0 2.6rem; } }
   .clientmsg__cards-item:hover {
     width: 90%;
     border-radius: 1.4rem;
+    box-shadow: 0 0.8rem 1rem rgba(0, 0, 0, 0.1);
     background-color: #fefeff; }
     .clientmsg__cards-item:hover .clientmsg__cards-item-text {
       padding: 1rem 2.4rem 1rem 0; }
@@ -416,8 +570,34 @@ body {
 .clientmsg__cards::-webkit-scrollbar {
   display: none; }
 
+@media screen and (max-width: 1051px) and (min-width: 800px) {
+  .clientmsg__project-heading {
+    margin-bottom: 1rem; } }
+
+@media screen and (max-width: 950px) {
+  .clientmsg .heading-text,
+  .clientmsg .date-text {
+    font-size: 2rem; } }
+
+@media screen and (max-width: 800px) {
+  .clientmsg {
+    grid-column: 2/-1; } }
+
+@media screen and (max-width: 700px) {
+  .clientmsg {
+    grid-column: 1/-1; } }
+
 .container {
+  overflow: hidden;
   display: grid;
   grid-template-columns: 11rem 1.5fr 1fr;
   grid-template-rows: 11rem 1fr;
   background-color: #f3f7fc; }
+  @media screen and (max-width: 1163px) and (min-width: 800px) {
+    .container {
+      grid-template-columns: 8rem 1.5fr 1fr;
+      grid-template-rows: 8rem 1fr; } }
+  @media screen and (max-width: 700px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 15rem 8rem 1fr 50rem; } }

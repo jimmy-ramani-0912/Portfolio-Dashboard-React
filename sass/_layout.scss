@@ -1,6 +1,17 @@
 .container {
+  overflow: hidden;
   display: grid;
   grid-template-columns: 11rem 1.5fr 1fr;
   grid-template-rows: 11rem 1fr;
   background-color: $bg-color;
+
+  @media screen and (max-width: 1163px) and (min-width: 800px) {
+    grid-template-columns: 8rem 1.5fr 1fr;
+    grid-template-rows: 8rem 1fr;
+  }
+
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 15rem 8rem 1fr 50rem;
+  }
 }

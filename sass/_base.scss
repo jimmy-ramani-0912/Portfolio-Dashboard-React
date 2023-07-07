@@ -8,6 +8,18 @@ html {
   font-size: 62.5%;
 }
 
+@media screen and (max-width: 1163px) {
+  html {
+    font-size: 57%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 54%;
+  }
+}
+
 body {
   font-family: sans-serif;
   font-weight: 400;
@@ -63,4 +75,10 @@ $card-6-sub: #ffae00;
 
 .icon-sidebar {
   color: $grey-dark;
+}
+
+.icon-general:hover,
+.icon-sidebar:hover,
+.icon-clientmsg:hover {
+  transform: scale(1.07);
 }
