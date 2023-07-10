@@ -351,7 +351,7 @@
       border-radius: 2rem;
       padding: 2rem;
       background-color: $bg-project-section;
-      box-shadow: 0 0.2rem 3rem rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0.2rem 3rem rgba(0, 0, 0/ 0.1);
 
       @media screen and (max-width: 1200px) and (min-width: 900px) {
         height: 30rem;
