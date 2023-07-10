@@ -209,7 +209,8 @@ body {
 
 .projects {
   background-color: #fefeff;
-  border-radius: 5rem;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
   padding: 4rem 4rem 0 4rem; }
   .projects__project-heading {
     font-family: serif;

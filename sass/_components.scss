@@ -224,7 +224,8 @@
 
 .projects {
   background-color: $bg-project-section;
-  border-radius: 5rem;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
   padding: 4rem 4rem 0 4rem;
 
   &__project-heading {
