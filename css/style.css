@@ -14,6 +14,10 @@ html {
   html {
     font-size: 54%; } }
 
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 42%; } }
+
 body {
   font-family: sans-serif;
   font-weight: 400;
@@ -65,6 +69,9 @@ body {
     margin-right: 3rem;
     display: flex;
     align-items: center; }
+    @media screen and (max-width: 470px) {
+      .header__info {
+        margin: 2.2rem 3.4rem; } }
     .header__info-left {
       width: 50%;
       display: flex;
@@ -105,6 +112,12 @@ body {
           width: 100%;
           outline: none;
           background-color: #fefeff; }
+      @media screen and (max-width: 330px) {
+        .header__info-search .search-icon {
+          height: 1.2rem;
+          width: 1.2rem; }
+        .header__info-search input::placeholder {
+          font-size: 1.2rem; } }
     .header__info-profile-info {
       display: flex;
       align-items: center; }
@@ -131,6 +144,14 @@ body {
         .header__info-profile-info .profile-img-name .profile-name {
           font-size: 1.8rem;
           color: #464646; }
+        @media screen and (max-width: 451px) {
+          .header__info-profile-info .profile-img-name {
+            flex-direction: column; }
+            .header__info-profile-info .profile-img-name img {
+              height: 2.5rem;
+              width: 2.5rem; }
+            .header__info-profile-info .profile-img-name .profile-name {
+              font-size: 1.4rem; } }
   @media screen and (max-width: 700px) {
     .header {
       grid-template-columns: 1fr; }
@@ -138,11 +159,11 @@ body {
         display: none; } }
 
 .siderbar {
-  background-color: #f3f7fc;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: start; }
   .siderbar__list {
     display: flex;
     align-items: center;
@@ -163,9 +184,13 @@ body {
       background-color: #1e1c2e; }
       .siderbar__list .siderbar__list-item:hover .icon-sidebar {
         color: #f3f7fc; }
+  @media screen and (max-width: 800px) and (min-width: 768px) {
+    .siderbar {
+      grid-row: 2/-1; } }
   @media screen and (max-width: 700px) {
     .siderbar {
-      grid-column: 1/-1; }
+      grid-column: 1/-1;
+      margin-top: 0; }
       .siderbar__list {
         width: 100%;
         flex-direction: row;
@@ -174,7 +199,7 @@ body {
 .projects {
   background-color: #fefeff;
   border-radius: 5rem;
-  padding: 4rem 6rem 0 4rem; }
+  padding: 4rem 4rem 0 4rem; }
   .projects__project-heading {
     font-family: serif;
     display: flex;
@@ -189,18 +214,14 @@ body {
       color: #464646; }
   .projects__info {
     display: flex;
-    align-items: start;
     margin-bottom: 2rem;
     padding-left: 2rem;
     padding-right: 2rem; }
-    @media screen and (max-width: 1350px) {
-      .projects__info {
-        flex-direction: column-reverse; } }
     .projects__info-progress-section {
       display: flex;
       align-items: end;
       margin-right: auto; }
-      @media screen and (max-width: 550) {
+      @media screen and (max-width: 550px) {
         .projects__info-progress-section {
           display: flex;
           justify-content: start;
@@ -216,22 +237,6 @@ body {
         font-size: 1.6rem;
         font-weight: 300;
         color: #464646; }
-      @media screen and (max-width: 1051px) {
-        .projects__info-progress-section-item {
-          display: flex;
-          justify-content: start;
-          align-items: center;
-          margin: 0 auto; }
-          .projects__info-progress-section-item h2 {
-            margin-right: 1rem; } }
-      @media screen and (max-width: 1051px) {
-        .projects__info-progress-section-item:hover {
-          background-color: #1e1c2e;
-          padding: 1.4rem 1.2rem;
-          border-radius: 0.6rem; }
-          .projects__info-progress-section-item:hover h2,
-          .projects__info-progress-section-item:hover h4 {
-            color: #f3f7fc; } }
       .projects__info-progress-section .circle {
         height: 0.8rem;
         width: 0.8rem;
@@ -240,7 +245,10 @@ body {
         border-radius: 50%;
         background-color: #f3f7fc;
         margin: 0 2.4rem 0.7rem 2.4rem; }
-      @media screen and (min-width: 800px) and (max-width: 1051px) {
+      @media screen and (max-width: 1350px) {
+        .projects__info-progress-section .circle {
+          margin-top: auto; } }
+      @media screen and (max-width: 1350px) {
         .projects__info-progress-section {
           width: 100%;
           display: grid;
@@ -248,29 +256,26 @@ body {
           grid-template-columns: 1fr 1fr;
           grid-template-rows: 1fr 1fr; }
           .projects__info-progress-section .circle {
-            display: none; } }
-      @media screen and (max-width: 764px) {
-        .projects__info-progress-section {
-          width: 100%;
-          display: grid;
-          gap: 2rem;
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: 1fr 1fr; }
-          .projects__info-progress-section .circle {
+            align-items: end;
             display: none; } }
     @media screen and (max-width: 1350px) {
       .projects__info-icons-section {
         width: 100%;
         text-align: end;
         margin-bottom: 1rem; } }
+    @media screen and (max-width: 460px) {
+      .projects__info {
+        flex-direction: column-reverse; } }
   .projects__cards-section {
-    height: 58vh;
+    width: 100%;
+    height: 55vh;
     overflow: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 6rem;
+    place-items: center;
     padding-top: 2.4rem;
-    padding-bottom: 8rem; }
+    padding-bottom: 4rem; }
     @media screen and (max-width: 1200px) and (min-width: 800px) {
       .projects__cards-section {
         gap: 3.5rem; } }
@@ -278,11 +283,12 @@ body {
       .projects__cards-section {
         height: 80vh; } }
     .projects__cards-section-card {
+      width: 95%;
       height: 28rem;
       border-radius: 2rem;
       padding: 2rem;
       background-color: #fefeff;
-      box-shadow: 0 0.2rem 2.8rem rgba(0, 0, 0, 0.1); }
+      box-shadow: 0 0.2rem 2.2rem rgba(0, 0, 0, 0.1); }
       @media screen and (max-width: 1200px) and (min-width: 900px) {
         .projects__cards-section-card {
           height: 30rem; } }
@@ -491,103 +497,99 @@ body {
       grid-column: 2/-1; } }
   @media screen and (max-width: 700px) {
     .projects {
-      grid-column: 1/-1; } }
+      grid-column: 1/-1;
+      padding: 4rem 2rem 0 2rem; } }
 
-.clientmsg__heading {
-  padding: 4rem 6rem 2rem 6rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-  .clientmsg__heading .heading-text {
-    font-size: 2.6rem;
-    color: #464646; }
-  @media screen and (max-width: 1350px) and (min-width: 800px) {
-    .clientmsg__heading {
-      padding: 4rem 4rem 2rem 6rem; } }
-  @media screen and (max-width: 1051px) {
-    .clientmsg__heading {
-      padding-top: 2rem; } }
-  @media screen and (max-width: 950px) {
-    .clientmsg__heading {
-      padding: 2rem 4rem 2rem 4rem; } }
-  @media screen and (max-width: 800px) {
-    .clientmsg__heading {
-      padding: 4rem 4rem 2rem 4rem; } }
-
-.clientmsg .divider-clientmsg {
-  height: 0.6px;
-  background-color: #9a9b9a;
-  margin: 1rem 0; }
-
-.clientmsg__cards {
-  height: 68vh;
-  overflow: auto; }
-  .clientmsg__cards-item {
-    width: 82%;
-    padding: 0.8rem 1.2rem;
-    margin: 0 2rem;
+.clientmsg {
+  background-color: #f3f7fc; }
+  .clientmsg__heading {
+    padding: 4rem 8rem 2rem 4rem;
     display: flex;
-    align-items: center; }
-    .clientmsg__cards-item img {
-      height: 5.8rem;
-      width: 5.8rem;
-      border-radius: 50%; }
-    .clientmsg__cards-item-text {
-      width: 100%;
-      margin-left: 1.2rem;
-      display: flex;
-      flex-direction: column;
-      font-family: serif; }
-      .clientmsg__cards-item-text-heading-client {
-        display: flex;
-        justify-content: space-between;
-        align-items: center; }
-        .clientmsg__cards-item-text-heading-client h3 {
-          font-size: 1.8rem;
-          color: #464646; }
-      .clientmsg__cards-item-text-desc {
-        line-height: 1.4;
-        font-size: 1.6rem;
-        color: #686868; }
-      .clientmsg__cards-item-text-date {
-        line-height: 1;
-        font-size: 1.6rem;
-        color: #9a9b9a;
-        font-weight: 600;
-        text-align: end;
-        padding: 0.8rem 0; }
-  .clientmsg__cards-item:last-child {
-    margin-bottom: 3.4rem; }
-  @media screen and (max-width: 950px) {
+    align-items: center;
+    justify-content: space-between; }
+    .clientmsg__heading .heading-text {
+      font-size: 2.6rem;
+      color: #464646; }
+    @media screen and (max-width: 1051px) {
+      .clientmsg__heading {
+        padding-top: 2rem; } }
+    @media screen and (max-width: 950px) {
+      .clientmsg__heading {
+        padding: 2rem 4rem 2rem 4rem; } }
+    @media screen and (max-width: 800px) {
+      .clientmsg__heading {
+        padding: 4rem 4rem 2rem 4rem; } }
+  .clientmsg .divider-clientmsg {
+    height: 0.6px;
+    background-color: #9a9b9a;
+    margin: 1rem 0; }
+  .clientmsg__cards {
+    height: 64vh;
+    overflow: auto; }
     .clientmsg__cards-item {
-      margin: 0 2.6rem; } }
-  .clientmsg__cards-item:hover {
-    width: 90%;
-    border-radius: 1.4rem;
-    box-shadow: 0 0.8rem 1rem rgba(0, 0, 0, 0.1);
-    background-color: #fefeff; }
-    .clientmsg__cards-item:hover .clientmsg__cards-item-text {
-      padding: 1rem 2.4rem 1rem 0; }
-
-.clientmsg__cards::-webkit-scrollbar {
-  display: none; }
-
-@media screen and (max-width: 1051px) and (min-width: 800px) {
-  .clientmsg__project-heading {
-    margin-bottom: 1rem; } }
-
-@media screen and (max-width: 950px) {
-  .clientmsg .heading-text,
-  .clientmsg .date-text {
-    font-size: 2rem; } }
-
-@media screen and (max-width: 800px) {
-  .clientmsg {
-    grid-column: 2/-1; } }
-
-@media screen and (max-width: 700px) {
-  .clientmsg {
-    grid-column: 1/-1; } }
+      width: 82%;
+      padding: 0.8rem 1.2rem;
+      margin: 0 2rem;
+      display: flex;
+      align-items: center; }
+      .clientmsg__cards-item img {
+        height: 5.8rem;
+        width: 5.8rem;
+        border-radius: 50%; }
+      .clientmsg__cards-item-text {
+        width: 100%;
+        margin-left: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        font-family: serif; }
+        .clientmsg__cards-item-text-heading-client {
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          .clientmsg__cards-item-text-heading-client h3 {
+            font-size: 1.8rem;
+            color: #464646; }
+        .clientmsg__cards-item-text-desc {
+          line-height: 1.4;
+          font-size: 1.6rem;
+          color: #686868; }
+        .clientmsg__cards-item-text-date {
+          line-height: 1;
+          font-size: 1.6rem;
+          color: #9a9b9a;
+          font-weight: 600;
+          text-align: end;
+          padding: 0.8rem 0; }
+    .clientmsg__cards-item:last-child {
+      margin-bottom: 3.4rem; }
+    @media screen and (max-width: 950px) {
+      .clientmsg__cards-item:hover {
+        width: 75%;
+        margin: 0 1rem 0 2rem; }
+      .clientmsg__cards-item:hover {
+        width: 0%; } }
+    .clientmsg__cards-item:hover {
+      width: 90%;
+      border-radius: 1.4rem;
+      box-shadow: 0 0.8rem 1rem rgba(0, 0, 0, 0.1);
+      background-color: #fefeff; }
+      .clientmsg__cards-item:hover .clientmsg__cards-item-text {
+        padding: 1rem 2.4rem 1rem 0; }
+  .clientmsg__cards::-webkit-scrollbar {
+    display: none; }
+  @media screen and (max-width: 1051px) and (min-width: 800px) {
+    .clientmsg__project-heading {
+      margin-bottom: 1rem; } }
+  @media screen and (max-width: 1050px) {
+    .clientmsg .heading-text,
+    .clientmsg .date-text {
+      font-size: 2rem; } }
+  @media screen and (max-width: 800px) {
+    .clientmsg {
+      grid-column: 2/-1; } }
+  @media screen and (max-width: 700px) {
+    .clientmsg {
+      grid-column: 1/-1; } }
 
 .container {
   height: 100vh;
@@ -599,7 +601,11 @@ body {
     .container {
       grid-template-columns: 8rem 1.5fr 1fr;
       grid-template-rows: 8rem 1fr; } }
+  @media screen and (max-width: 800px) {
+    .container {
+      grid-template-columns: 8rem 1.5fr 1fr;
+      grid-template-rows: 8rem 1fr 1fr; } }
   @media screen and (max-width: 700px) {
     .container {
       grid-template-columns: 1fr;
-      grid-template-rows: 15rem 8rem 1fr 50rem; } }
+      grid-template-rows: 15rem 8em 1fr 50rem; } }

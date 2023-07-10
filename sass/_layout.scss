@@ -10,8 +10,13 @@
     grid-template-rows: 8rem 1fr;
   }
 
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 8rem 1.5fr 1fr;
+    grid-template-rows: 8rem 1fr 1fr;
+  }
+
   @media screen and (max-width: 700px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 15rem 8rem 1fr 50rem;
+    grid-template-rows: 15rem 8em 1fr 50rem;
   }
 }

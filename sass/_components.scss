@@ -24,6 +24,10 @@
     display: flex;
     align-items: center;
 
+    @media screen and (max-width: 470px) {
+      margin: 2.2rem 3.4rem;
+    }
+
     &-left {
       width: 50%;
       display: flex;
@@ -75,6 +79,17 @@
           background-color: $bg-project-section;
         }
       }
+
+      @media screen and (max-width: 330px) {
+        .search-icon {
+          height: 1.2rem;
+          width: 1.2rem;
+        }
+
+        & input::placeholder {
+          font-size: 1.2rem;
+        }
+      }
     }
 
     &-profile-info {
@@ -114,6 +129,19 @@
           font-size: 1.8rem;
           color: $grey-dark;
         }
+
+        @media screen and (max-width: 451px) {
+          flex-direction: column;
+
+          & img {
+            height: 2.5rem;
+            width: 2.5rem;
+          }
+
+          .profile-name {
+            font-size: 1.4rem;
+          }
+        }
       }
     }
   }
@@ -127,11 +155,11 @@
 }
 
 .siderbar {
-  background-color: $bg-color;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 
   &__list {
     display: flex;
@@ -164,8 +192,13 @@
       }
     }
   }
+  @media screen and (max-width: 800px) and (min-width: 768px) {
+    grid-row: 2/-1;
+  }
+
   @media screen and (max-width: 700px) {
     grid-column: 1/-1;
+    margin-top: 0;
     &__list {
       width: 100%;
       flex-direction: row;
@@ -177,7 +210,7 @@
 .projects {
   background-color: $bg-project-section;
   border-radius: 5rem;
-  padding: 4rem 6rem 0 4rem;
+  padding: 4rem 4rem 0 4rem;
 
   &__project-heading {
     font-family: serif;
@@ -197,21 +230,16 @@
 
   &__info {
     display: flex;
-    align-items: start;
     margin-bottom: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
-
-    @media screen and (max-width: 1350px) {
-      flex-direction: column-reverse;
-    }
 
     &-progress-section {
       display: flex;
       align-items: end;
       margin-right: auto;
 
-      @media screen and (max-width: 550) {
+      @media screen and (max-width: 550px) {
         display: flex;
         justify-content: start;
         align-items: center;
@@ -221,6 +249,7 @@
           margin-right: 1rem;
         }
       }
+
       &-item {
         h2 {
           font-size: 2.2rem;
@@ -232,30 +261,6 @@
           font-size: 1.6rem;
           font-weight: 300;
           color: $grey-dark;
-        }
-
-        @media screen and (max-width: 1051px) {
-          display: flex;
-          justify-content: start;
-          align-items: center;
-          margin: 0 auto;
-
-          h2 {
-            margin-right: 1rem;
-          }
-        }
-      }
-
-      @media screen and (max-width: 1051px) {
-        &-item:hover {
-          background-color: $main-color;
-          padding: 1.4rem 1.2rem;
-          border-radius: 0.6rem;
-
-          h2,
-          h4 {
-            color: $bg-color;
-          }
         }
       }
 
@@ -269,18 +274,13 @@
         margin: 0 2.4rem 0.7rem 2.4rem;
       }
 
-      @media screen and (min-width: 800px) and (max-width: 1051px) {
-        width: 100%;
-        display: grid;
-        gap: 2rem;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-
+      @media screen and (max-width: 1350px) {
         .circle {
-          display: none;
+          margin-top: auto;
         }
       }
-      @media screen and (max-width: 764px) {
+
+      @media screen and (max-width: 1350px) {
         width: 100%;
         display: grid;
         gap: 2rem;
@@ -288,6 +288,7 @@
         grid-template-rows: 1fr 1fr;
 
         .circle {
+          align-items: end;
           display: none;
         }
       }
@@ -300,16 +301,21 @@
         margin-bottom: 1rem;
       }
     }
+    @media screen and (max-width: 460px) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__cards-section {
-    height: 58vh;
+    width: 100%;
+    height: 55vh;
     overflow: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 6rem;
+    place-items: center;
     padding-top: 2.4rem;
-    padding-bottom: 8rem;
+    padding-bottom: 4rem;
 
     @media screen and (max-width: 1200px) and (min-width: 800px) {
       gap: 3.5rem;
@@ -320,11 +326,12 @@
     }
 
     &-card {
+      width: 95%;
       height: 28rem;
       border-radius: 2rem;
       padding: 2rem;
       background-color: $bg-project-section;
-      box-shadow: 0 0.2rem 2.8rem rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0.2rem 2.2rem rgba(0, 0, 0, 0.1);
 
       @media screen and (max-width: 1200px) and (min-width: 900px) {
         height: 30rem;
@@ -644,12 +651,14 @@
 
   @media screen and (max-width: 700px) {
     grid-column: 1/-1;
+    padding: 4rem 2rem 0 2rem;
   }
 }
 
 .clientmsg {
+  background-color: $bg-color;
   &__heading {
-    padding: 4rem 6rem 2rem 6rem;
+    padding: 4rem 8rem 2rem 4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -659,9 +668,9 @@
       color: $grey-dark;
     }
 
-    @media screen and (max-width: 1350px) and (min-width: 800px) {
-      padding: 4rem 4rem 2rem 6rem;
-    }
+    // @media screen and (max-width: 1350px) and (min-width: 800px) {
+    //   padding: 4rem 6rem 2rem 6rem;
+    // }
 
     @media screen and (max-width: 1051px) {
       padding-top: 2rem;
@@ -683,7 +692,7 @@
   }
 
   &__cards {
-    height: 68vh;
+    height: 64vh;
     overflow: auto;
     &-item {
       width: 82%;
@@ -733,8 +742,16 @@
       margin-bottom: 3.4rem;
     }
     @media screen and (max-width: 950px) {
-      &-item {
-        margin: 0 2.6rem;
+      // margin: 0 2.6rem;
+      &-item:hover {
+        width: 75%;
+        margin: 0 1rem 0 2rem;
+
+        // margin: 0 2.6rem;
+      }
+      &-item:hover {
+        width: 0%;
+        // margin: 0 2.6rem;
       }
     }
 
@@ -754,14 +771,12 @@
   }
 
   @media screen and (max-width: 1051px) and (min-width: 800px) {
-    // padding: 2rem 4rem 0 4rem;
-
     &__project-heading {
       margin-bottom: 1rem;
     }
   }
 
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 1050px) {
     .heading-text,
     .date-text {
       font-size: 2rem;
