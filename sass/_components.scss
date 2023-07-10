@@ -126,6 +126,7 @@
         }
 
         .profile-name {
+          font-family: serif;
           font-size: 1.8rem;
           color: $grey-dark;
         }
@@ -292,6 +293,10 @@
           display: none;
         }
       }
+    }
+
+    &-progress-section {
+      cursor: pointer;
     }
 
     &-icons-section {

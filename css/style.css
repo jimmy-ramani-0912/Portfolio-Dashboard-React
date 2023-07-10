@@ -142,6 +142,7 @@ body {
           width: 4rem;
           border-radius: 50%; }
         .header__info-profile-info .profile-img-name .profile-name {
+          font-family: serif;
           font-size: 1.8rem;
           color: #464646; }
         @media screen and (max-width: 451px) {
@@ -258,6 +259,8 @@ body {
           .projects__info-progress-section .circle {
             align-items: end;
             display: none; } }
+    .projects__info-progress-section {
+      cursor: pointer; }
     @media screen and (max-width: 1350px) {
       .projects__info-icons-section {
         width: 100%;
