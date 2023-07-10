@@ -118,6 +118,9 @@ body {
           width: 1.2rem; }
         .header__info-search input::placeholder {
           font-size: 1.2rem; } }
+    .header__info-search:hover,
+    .header__info input:hover {
+      cursor: pointer; }
     .header__info-profile-info {
       display: flex;
       align-items: center; }

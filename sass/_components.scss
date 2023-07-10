@@ -92,6 +92,11 @@
       }
     }
 
+    &-search:hover,
+    & input:hover {
+      cursor: pointer;
+    }
+
     &-profile-info {
       display: flex;
       align-items: center;
