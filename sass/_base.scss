@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   box-sizing: border-box;
@@ -72,6 +72,12 @@ $card-6-sub: #ffae00;
 .icon-sidebar {
   height: 2.6rem;
   width: 2.6rem;
+  line-height: 5;
+}
+
+.card-icon {
+  height: 1.8rem;
+  width: 1.8rem;
 }
 
 .icon-clientmsg {

@@ -19,7 +19,7 @@ html {
     font-size: 42%; } }
 
 body {
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   box-sizing: border-box; }
@@ -36,7 +36,12 @@ body {
 .icon-general,
 .icon-sidebar {
   height: 2.6rem;
-  width: 2.6rem; }
+  width: 2.6rem;
+  line-height: 5; }
+
+.card-icon {
+  height: 1.8rem;
+  width: 1.8rem; }
 
 .icon-clientmsg {
   height: 1.8rem;
@@ -80,7 +85,6 @@ body {
       align-items: center;
       margin-right: auto; }
       .header__info-left-text {
-        font-family: serif;
         margin-right: auto;
         color: #1e1c2e;
         font-size: 3rem; }
@@ -124,10 +128,11 @@ body {
     .header__info input:hover {
       cursor: pointer; }
     .header__info-profile-info {
+      line-height: normal;
       display: flex;
       align-items: center; }
       .header__info-profile-info .ver-line {
-        border: 1px solid black;
+        border: 0.0002rem solid rgba(77, 77, 77, 0.755);
         height: 3rem; }
       .header__info-profile-info .notification-icon-setting {
         position: relative; }
@@ -147,10 +152,11 @@ body {
           width: 4rem;
           border-radius: 50%; }
         .header__info-profile-info .profile-img-name img:hover {
+          transition: all 0.5s ease-in-out;
           transform: scale(1.07);
           cursor: pointer; }
         .header__info-profile-info .profile-img-name .profile-name {
-          font-family: serif;
+          font-weight: 600;
           font-size: 1.8rem;
           color: #464646; }
         .header__info-profile-info .profile-img-name .profile-name:hover {
@@ -170,6 +176,7 @@ body {
         display: none; } }
 
 .siderbar {
+  background-color: #f3f7fc;
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
@@ -198,6 +205,9 @@ body {
   @media screen and (max-width: 800px) and (min-width: 768px) {
     .siderbar {
       grid-row: 2/-1; } }
+  @media screen and (max-width: 1051px) {
+    .siderbar {
+      margin-top: 3rem; } }
   @media screen and (max-width: 700px) {
     .siderbar {
       grid-column: 1/-1;
@@ -213,7 +223,6 @@ body {
   border-top-right-radius: 5rem;
   padding: 4rem 4rem 0 4rem; }
   .projects__project-heading {
-    font-family: serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -222,7 +231,8 @@ body {
     padding-right: 2rem; }
     .projects__project-heading .heading-text,
     .projects__project-heading .date-text {
-      font-size: 2.6rem;
+      font-weight: 600;
+      font-size: 2.4rem;
       color: #464646; }
   .projects__info {
     display: flex;
@@ -390,6 +400,7 @@ body {
           border-radius: 2.8rem; }
         .projects__cards-section-card-bottom-right :hover {
           cursor: pointer;
+          transition: all 0.5s ease-in-out;
           transform: scale(1.1); }
         @media screen and (max-width: 1200px) and (min-width: 800px) {
           .projects__cards-section-card-bottom {
@@ -412,6 +423,7 @@ body {
           background-color: #2ac9ff; }
       .projects__cards-section-card:hover {
         cursor: pointer;
+        transition: all 0.5s ease-in-out;
         transform: scale(1.02); }
         .projects__cards-section-card:hover .hover-lines {
           transition: all 0.1s;
@@ -439,7 +451,7 @@ body {
         color: #fe733a; }
       .projects__cards-section-card:nth-child(2):hover .hover-line-1,
       .projects__cards-section-card:nth-child(2):hover .hover-line-2 {
-        background-color: #fe733a; }
+        background-color: #fee5ca; }
     .projects__cards-section-card:nth-child(3) {
       background-color: #baf3d2; }
       .projects__cards-section-card:nth-child(3) .skill,
@@ -452,7 +464,7 @@ body {
         color: #02d153; }
       .projects__cards-section-card:nth-child(3):hover .hover-line-1,
       .projects__cards-section-card:nth-child(3):hover .hover-line-2 {
-        background-color: #02d153; }
+        background-color: #baf3d2; }
     .projects__cards-section-card:nth-child(4) {
       background-color: #fed3e3; }
       .projects__cards-section-card:nth-child(4) .skill,
@@ -465,7 +477,7 @@ body {
         color: #ff73ad; }
       .projects__cards-section-card:nth-child(4):hover .hover-line-1,
       .projects__cards-section-card:nth-child(4):hover .hover-line-2 {
-        background-color: #ff73ad; }
+        background-color: #fed3e3; }
     .projects__cards-section-card:nth-child(5) {
       background-color: #e9e7fd; }
       .projects__cards-section-card:nth-child(5) .skill,
@@ -478,7 +490,7 @@ body {
         color: #09006c; }
       .projects__cards-section-card:nth-child(5):hover .hover-line-1,
       .projects__cards-section-card:nth-child(5):hover .hover-line-2 {
-        background-color: #09006c; }
+        background-color: #e9e7fd; }
     .projects__cards-section-card:nth-child(6) {
       background-color: #fff1d2; }
       .projects__cards-section-card:nth-child(6) .skill,
@@ -491,7 +503,7 @@ body {
         color: #ffae00; }
       .projects__cards-section-card:nth-child(6):hover .hover-line-1,
       .projects__cards-section-card:nth-child(6):hover .hover-line-2 {
-        background-color: #ffae00; }
+        background-color: #fff1d2; }
   .projects__cards-section::-webkit-scrollbar {
     display: none; }
   @media screen and (max-width: 700px) {
@@ -522,7 +534,7 @@ body {
     align-items: center;
     justify-content: space-between; }
     .clientmsg__heading .heading-text {
-      font-size: 2.6rem;
+      font-size: 2.4rem;
       color: #464646; }
     @media screen and (max-width: 1051px) {
       .clientmsg__heading {
@@ -537,6 +549,11 @@ body {
     height: 0.6px;
     background-color: #9a9b9a;
     margin: 1rem 0; }
+  @media screen and (max-width: 800px) {
+    .clientmsg .divider-clientmsg {
+      height: 0.6px;
+      background-color: #9a9b9a;
+      margin: 0.4rem 0; } }
   .clientmsg__cards {
     height: 64vh;
     overflow: auto; }
@@ -554,18 +571,17 @@ body {
         width: 100%;
         margin-left: 1.2rem;
         display: flex;
-        flex-direction: column;
-        font-family: serif; }
+        flex-direction: column; }
         .clientmsg__cards-item-text-heading-client {
           display: flex;
           justify-content: space-between;
           align-items: center; }
           .clientmsg__cards-item-text-heading-client h3 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: #464646; }
         .clientmsg__cards-item-text-desc {
           line-height: 1.4;
-          font-size: 1.6rem;
+          font-size: 1.4rem;
           color: #686868; }
         .clientmsg__cards-item-text-date {
           line-height: 1;
@@ -617,7 +633,7 @@ body {
       grid-template-rows: 8rem 1fr; } }
   @media screen and (max-width: 800px) {
     .container {
-      grid-template-columns: 8rem 1.5fr 1fr;
+      grid-template-columns: 8rem 1fr;
       grid-template-rows: 8rem 1fr 1fr; } }
   @media screen and (max-width: 700px) {
     .container {

@@ -35,7 +35,6 @@
       margin-right: auto;
 
       &-text {
-        font-family: serif;
         margin-right: auto;
         color: $main-color;
         font-size: 3rem;
@@ -98,11 +97,12 @@
     }
 
     &-profile-info {
+      line-height: normal;
       display: flex;
       align-items: center;
 
       .ver-line {
-        border: 1px solid black;
+        border: 0.0002rem solid rgba(77, 77, 77, 0.755);
         height: 3rem;
       }
 
@@ -131,12 +131,13 @@
         }
 
         & img:hover {
+          transition: all 0.5s ease-in-out;
           transform: scale(1.07);
           cursor: pointer;
         }
 
         .profile-name {
-          font-family: serif;
+          font-weight: 600;
           font-size: 1.8rem;
           color: $grey-dark;
         }
@@ -170,6 +171,7 @@
 }
 
 .siderbar {
+  background-color: $bg-color;
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
@@ -211,6 +213,10 @@
     grid-row: 2/-1;
   }
 
+  @media screen and (max-width: 1051px) {
+    margin-top: 3rem;
+  }
+
   @media screen and (max-width: 700px) {
     grid-column: 1/-1;
     margin-top: 0;
@@ -229,7 +235,6 @@
   padding: 4rem 4rem 0 4rem;
 
   &__project-heading {
-    font-family: serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -239,7 +244,8 @@
 
     .heading-text,
     .date-text {
-      font-size: 2.6rem;
+      font-weight: 600;
+      font-size: 2.4rem;
       color: $grey-dark;
     }
   }
@@ -351,7 +357,7 @@
       border-radius: 2rem;
       padding: 2rem;
       background-color: $bg-project-section;
-      box-shadow: 0 0.2rem 3rem rgba(0, 0, 0/ 0.1);
+      box-shadow: 0 0.2rem 3rem rgba(0, 0, 0, 0.1);
 
       @media screen and (max-width: 1200px) and (min-width: 900px) {
         height: 30rem;
@@ -481,6 +487,7 @@
           }
           :hover {
             cursor: pointer;
+            transition: all 0.5s ease-in-out;
             transform: scale(1.1);
           }
         }
@@ -515,6 +522,7 @@
 
       &:hover {
         cursor: pointer;
+        transition: all 0.5s ease-in-out;
         transform: scale(1.02);
         .hover-lines {
           transition: all 0.1s;
@@ -556,7 +564,7 @@
       &:hover {
         .hover-line-1,
         .hover-line-2 {
-          background-color: $card-2-sub;
+          background-color: $card-2;
         }
       }
     }
@@ -576,7 +584,7 @@
       &:hover {
         .hover-line-1,
         .hover-line-2 {
-          background-color: $card-3-sub;
+          background-color: $card-3;
         }
       }
     }
@@ -596,7 +604,7 @@
       &:hover {
         .hover-line-1,
         .hover-line-2 {
-          background-color: $card-4-sub;
+          background-color: $card-4;
         }
       }
     }
@@ -616,7 +624,7 @@
       &:hover {
         .hover-line-1,
         .hover-line-2 {
-          background-color: $card-5-sub;
+          background-color: $card-5;
         }
       }
     }
@@ -636,7 +644,7 @@
       &:hover {
         .hover-line-1,
         .hover-line-2 {
-          background-color: $card-6-sub;
+          background-color: $card-6;
         }
       }
     }
@@ -684,13 +692,9 @@
     justify-content: space-between;
 
     .heading-text {
-      font-size: 2.6rem;
+      font-size: 2.4rem;
       color: $grey-dark;
     }
-
-    // @media screen and (max-width: 1350px) and (min-width: 800px) {
-    //   padding: 4rem 6rem 2rem 6rem;
-    // }
 
     @media screen and (max-width: 1051px) {
       padding-top: 2rem;
@@ -709,6 +713,14 @@
     height: 0.6px;
     background-color: $grey-light;
     margin: 1rem 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    .divider-clientmsg {
+      height: 0.6px;
+      background-color: $grey-light;
+      margin: 0.4rem 0;
+    }
   }
 
   &__cards {
@@ -730,21 +742,20 @@
         margin-left: 1.2rem;
         display: flex;
         flex-direction: column;
-        font-family: serif;
 
         &-heading-client {
           display: flex;
           justify-content: space-between;
           align-items: center;
           h3 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: $grey-dark;
           }
         }
 
         &-desc {
           line-height: 1.4;
-          font-size: 1.6rem;
+          font-size: 1.4rem;
           color: $card-heading;
         }
 
@@ -762,16 +773,12 @@
       margin-bottom: 3.4rem;
     }
     @media screen and (max-width: 950px) {
-      // margin: 0 2.6rem;
       &-item:hover {
         width: 75%;
         margin: 0 1rem 0 2rem;
-
-        // margin: 0 2.6rem;
       }
       &-item:hover {
         width: 0%;
-        // margin: 0 2.6rem;
       }
     }
 
