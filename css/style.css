@@ -48,7 +48,8 @@ body {
 .icon-general:hover,
 .icon-sidebar:hover,
 .icon-clientmsg:hover {
-  transform: scale(1.07); }
+  transform: scale(1.07);
+  cursor: pointer; }
 
 .header {
   grid-column: 1/-1;
