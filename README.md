@@ -2,10 +2,6 @@
 
 Welcome to my awesome website! This site showcases my projects, portfolio, and other cool stuff.
 
-![Large Screen](./t5-1.png)
-
-![Tablet Screen](./t5-2.png) ![Mobile Screen](./t5-3.png)
-
 Check out the live site: [Dashboard](https://test-5-me.netlify.app/)
 
 ## About
@@ -23,3 +19,10 @@ To view the website locally or make changes, follow these steps:
 ## Contributing
 
 Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
+
+## Demo
+
+![Large Screen](./t5-1.png)
+![Tablet Screen](./t5-2.png)
+![Mobile Screen](./t5-3.png)
+
