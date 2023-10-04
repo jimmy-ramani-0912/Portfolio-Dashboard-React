@@ -2,6 +2,8 @@
 
 Welcome to my awesome website! This site showcases my projects, portfolio, and other cool stuff.
 
+![Large Screen](./t5-1.png)
+
 Check out the live site: [Dashboard](https://test-5-me.netlify.app/)
 
 ## About
