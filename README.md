@@ -20,7 +20,7 @@ To view the website locally or make changes, follow these steps:
 
 Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
 
-## Demo(https://test-5-me.netlify.app/)
+## Demo
 
 ![Large Screen](./t5-1.png)
 ![Tablet Screen](./t5-2.png)
